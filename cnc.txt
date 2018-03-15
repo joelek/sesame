@@ -1,0 +1,92 @@
+C&C:
+
+2bytesle: number of records (NOR) = 116
+4bytesle: data size in bytes = file_size - NOR*12 - 6 = 3372975  diff of 702
+
+
+4: checksum?
+4: offset in file relative to data section (33145)
+4: size in bytes (768 = palette)
+
+
+sound:
+
+2: sample_rate (22050)
+4: data_size (15954) (file_size is 15966, delta 12)
+4: around 4 times file size (62824)
+2: constant? (25346)
+2: volume? (512)
+2: panning? (2048)
+4: constant? (57007)
+
+
+
+
+  Index_Adjust : array [0..7] of integer = (-1,-1,-1,-1,2,4,6,8);
+
+=============================
+ Appendix B : THE STEP TABLE
+=============================
+
+  Steps_Table : array [0..88] of integer =(
+        7,     8,     9,     10,    11,    12,     13,    14,    16,
+        17,    19,    21,    23,    25,    28,     31,    34,    37,
+        41,    45,    50,    55,    60,    66,     73,    80,    88,
+        97,    107,   118,   130,   143,   157,    173,   190,   209,
+        230,   253,   279,   307,   337,   371,    408,   449,   494,
+        544,   598,   658,   724,   796,   876,    963,   1060,  1166,
+        1282,  1411,  1552,  1707,  1878,  2066,   2272,  2499,  2749,
+        3024,  3327,  3660,  4026,  4428,  4871,   5358,  5894,  6484,
+        7132,  7845,  8630,  9493,  10442, 11487,  12635, 13899, 15289,
+        16818, 18500, 20350, 22385, 24623, 27086,  29794, 32767 );
+
+
+
+temperat:1 (image)
+
+2: width (24)
+2: height (24)
+4: number_of_tiles (9)
+4: file_size (5234)
+4: data_start? (32)
+4: ? (0)
+2: ? (0xFFFF)
+1: ? (26)
+1: ? (13)
+4: 5225 (a few bytes before file end, not always)
+4: 5216 (always height?=9 bytes before 5225)
+(32 bytes)
+
+general:10 (image, 32377)
+
+2: size_minus_two 32375
+2:4
+4:64000
+4:768
+1:0
+
+general:35 (map, 8192)
+
+64*64*2byte
+
+
+general:3 (image)
+
+2: image_height_or_frame_number (92)
+4: ? (0)
+2: canvas_width (320)
+2: canvas_height(200)
+4: (88855)
+
+
+n+1offsets
+
+4:390
+4:12440
+4:12841
+4:13500
+4:14177
+4:14759
+4:15358
+
+30+8*first_two_bytes

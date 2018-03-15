@@ -1,0 +1,8 @@
+#pragma once
+
+namespace sesame {
+  namespace lib {
+    template <typename T>
+    class borrowed_t;
+  }
+}

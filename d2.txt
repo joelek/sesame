@@ -1,0 +1,16 @@
+Doom 2, Retail, DOS, Little Endian
+
+wad_header_t {
+  4: identifier "IWAD"
+  4: number_of_records (2 956)
+  4: record_table_offset (14 896 104)
+};
+
+@record_table_absolute_offset:
+record_table_entry_t[number_of_records];
+
+record_table_entry_t {
+  4: offset (12)
+  4: length (10752)
+  8: name "PLAYPAL\0" (can be non-zero terminated)
+};

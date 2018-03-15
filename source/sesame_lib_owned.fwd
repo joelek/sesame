@@ -1,0 +1,8 @@
+#pragma once
+
+namespace sesame {
+  namespace lib {
+    template <typename T>
+    class owned_t;
+  }
+}
